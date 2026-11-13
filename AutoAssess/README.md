@@ -1,3 +1,5 @@
+[返回仓库首页与快速开始](../README.md)
+
 <div align="center">
 
 <img src="desktop-companion/assets/gear.png" width="64" height="64" alt="AutoAssess 图标">
@@ -60,7 +62,7 @@ flowchart LR
 ### 1. 获取项目
 
 ```bash
-git clone https://github.com/hxhxhxhy1226/qw.git autoassess
+git clone https://github.com/hxhxhxhy1226/AutoAssess.git autoassess
 cd autoassess/AutoAssess
 ```
 
