@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>问卷星结构回归样例</title>
+<style>body{font:16px/1.8 system-ui;margin:40px;max-width:850px}.field{border:1px solid #ddd;padding:24px}.ui-radio{padding:12px;border:1px solid #ddd;margin:8px 0;cursor:pointer}.jqchecked{display:inline-block;background:#743bed;width:12px;height:12px;border-radius:50%}#divFengMian{position:fixed;inset:0;background:#f2f5ff;padding:90px}button,a{padding:12px;cursor:pointer}</style>
+<body><div id="divFengMian"><h1>练习说明</h1><p>这是一份自编测试问卷，先打开插件，再进入题目。</p><button id="slideChunk">开始作答</button></div><div id="divQuestion">
+<fieldset class="fieldset" pg="1" id="fieldset1"><div class="field ui-field-contain" topic="1" id="div1" type="3"><div class="field-label"><span class="req">*</span><div class="topicnumber">1.</div><div class="topichtml">最符合你的学习习惯是</div></div><div class="ui-controlgroup column1">
+<div class="ui-radio"><span class="jqradiowrapper"><input type="radio" value="1" id="q1_1" name="q1" style="display:none"><a class="jqradio"></a></span><div class="label" for="q1_1">A.先规划学习任务</div></div>
+<div class="ui-radio"><span class="jqradiowrapper"><input type="radio" value="2" id="q1_2" name="q1" style="display:none"><a class="jqradio"></a></span><div class="label" for="q1_2">B.遇到困难主动请教</div></div>
+<div class="ui-radio"><span class="jqradiowrapper"><input type="radio" value="3" id="q1_3" name="q1" style="display:none"><a class="jqradio"></a></span><div class="label" for="q1_3">C.课后总结知识点</div></div>
+</div></div></fieldset>
+<fieldset class="fieldset" pg="2" id="fieldset2" style="display:none"><div class="field ui-field-contain" topic="2" id="div2" type="3"><div class="field-label"><div class="topicnumber">2.</div><div class="topichtml">下一道自编练习题</div></div><div class="ui-controlgroup column1">
+<div class="ui-radio"><span><input type="radio" value="1" id="q2_1" name="q2" style="display:none"><a class="jqradio"></a></span><div class="label" for="q2_1">A.第一种选择</div></div><div class="ui-radio"><span><input type="radio" value="2" id="q2_2" name="q2" style="display:none"><a class="jqradio"></a></span><div class="label" for="q2_2">B.第二种选择</div></div>
+</div></div></fieldset></div><div id="divNext"><a href="javascript:;" class="button">下一页</a></div><button id="submit" style="display:none">提交</button>
+<script>
+document.getElementById('slideChunk').onclick=()=>document.getElementById('divFengMian').style.display='none';
+if(location.pathname.endsWith('wjx-open'))document.getElementById('divFengMian').style.display='none';
+document.querySelectorAll('.ui-radio').forEach(el=>el.addEventListener('click',()=>{el.closest('.field').querySelectorAll('input').forEach(i=>i.checked=false);el.closest('.field').querySelectorAll('.jqradio').forEach(a=>a.classList.remove('jqchecked'));el.querySelector('input').checked=true;el.querySelector('.jqradio').classList.add('jqchecked')}));
+document.querySelector('#divNext a').onclick=()=>{if(!document.querySelector('#fieldset1 input:checked'))return;document.getElementById('fieldset1').style.display='none';document.getElementById('fieldset2').style.display='';document.getElementById('divNext').style.display='none';document.getElementById('submit').style.display=''};
+document.getElementById('submit').onclick=()=>document.body.dataset.submitted='true';
+</script></body></html>

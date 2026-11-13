@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>北森性格测试</title>
+<style>
+body{font:17px/1.7 system-ui;background:#c3d6fd;padding:40px;color:#222}
+#divContent{max-width:880px;margin:auto;background:white;padding:35px}
+#htitle{text-align:center;color:#2e68ff;margin:0 0 35px}.fieldset{border:0}
+.field-label{display:flex;gap:8px;margin:18px 0}.ui-radio{display:flex;padding:10px 22px;gap:10px;cursor:pointer}
+.jqradio{display:inline-block;width:16px;height:16px;border:1px solid #aaa;border-radius:50%}.jqchecked{background:#4c6fff}
+#divNext{text-align:center;margin-top:35px}#divNext a{display:inline-block;background:#2c66ff;color:white;padding:10px 45px;cursor:pointer}
+</style>
+<body data-personality-fixture><main id="divContent"><div id="toptitle" class="topTitle headerWrap"><h1 id="htitle" class="htitle">北森性格测试</h1></div><div id="divQuestion"></div><div id="divNext"><a href="javascript:;">下一页</a></div><p id="fixtureMessage"></p></main>
+<script>
+'use strict';
+// Original local structure fixture; only page four's text reproduces the report.
+const fixtureQuestions=[
+  ['行事干脆果断','乐于与人交往','行事颇有远见'],
+  ['我会检查清单','我会记录过程','我会回顾安排'],
+  ['我喜欢安静观察','我喜欢独立整理','我喜欢缓慢尝试'],
+  ['很少情绪起伏大','很少让自己空闲','很少会没有主见'],
+  ['惯于先观察后行动','惯于先记录后回顾','惯于先尝试后归纳'],
+  ['面对陌生安排先理清次序','面对陌生安排先收集信息','面对陌生安排先询问细节'],
+  ['遇到新环境先建立联系','遇到新环境先梳理流程','遇到新环境先观察氛围'],
+  ['面对选择倾向提前思考','面对选择倾向慢慢比较','面对选择倾向迅速尝试']
+];
+window.fixtureState={page:1,clicks:[],nextCalls:0,navigation:[],completed:false};
+document.getElementById('divQuestion').innerHTML=fixtureQuestions.map((options,index)=>{
+  const page=index+1,stem=page<=4?'最符合选项是':'最不符合选项是';
+  return `<fieldset class="fieldset" pg="${page}" id="fieldset${page}"><div class="field ui-field-contain" topic="${page}" id="div${page}" type="3"><div class="field-label"><div class="topicnumber">${page}.</div><div class="topichtml">${stem}</div></div><div class="ui-controlgroup column1">${options.map((text,position)=>`<div class="ui-radio"><span class="jqradiowrapper"><input type="radio" value="${position+1}" id="q${page}_${position+1}" name="q${page}" style="display:none"><a class="jqradio"></a></span><div class="label" for="q${page}_${position+1}">${String.fromCharCode(65+position)}.${text}</div></div>`).join('')}</div></div></fieldset>`;
+}).join('');
+window.fixtureShowPage=page=>{
+  fixtureState.page=page;
+  document.querySelectorAll('.fieldset').forEach(fieldset=>fieldset.style.display=Number(fieldset.getAttribute('pg'))===page?'':'none');
+  // WJX hides the survey header after the first page; tab title stays unchanged.
+  document.getElementById('toptitle').style.display=page===1?'':'none';
+};
+document.querySelectorAll('.ui-radio').forEach(row=>row.addEventListener('click',()=>{
+  const group=row.closest('.field'),input=row.querySelector('input');
+  group.querySelectorAll('input').forEach(other=>other.checked=false);
+  group.querySelectorAll('.jqradio').forEach(mark=>mark.classList.remove('jqchecked'));
+  input.checked=true;row.querySelector('.jqradio').classList.add('jqchecked');
+  fixtureState.clicks.push({topic:Number(group.getAttribute('topic')),value:input.value});
+}));
+document.querySelector('#divNext a').addEventListener('click',()=>{
+  fixtureState.nextCalls++;
+  const current=document.getElementById('fieldset'+fixtureState.page),input=current.querySelector('input:checked');
+  fixtureState.navigation.push({topic:fixtureState.page,value:input?.value||''});
+  if(!input)return;
+  if(fixtureState.page<fixtureQuestions.length)fixtureShowPage(fixtureState.page+1);
+  else{
+    fixtureState.completed=true;current.style.display='none';document.getElementById('divNext').style.display='none';
+    const message=document.getElementById('fixtureMessage');message.dataset.personalityComplete='true';message.textContent='本场性格练习已完成';
+  }
+});
+const start=Math.max(1,Math.min(8,Number(new URLSearchParams(location.search).get('page'))||1));
+for(let page=1;page<start;page++){
+  const previous=document.getElementById('div'+page).querySelector('.ui-radio');
+  previous.querySelector('input').checked=true;previous.querySelector('.jqradio').classList.add('jqchecked');
+}
+fixtureShowPage(start);
+</script></body></html>

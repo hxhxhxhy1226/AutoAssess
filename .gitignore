@@ -1,0 +1,34 @@
+# Local-only directories outside the packaged project
+/.local/
+/.workbuddy/
+/.review/
+
+# Generated project outputs
+/AutoAssess/build/
+/AutoAssess/dist/
+/build/
+/dist/
+
+# Local assistant and editor state
+**/.workbuddy/
+**/.review/
+**/.local/
+.idea/
+.vscode/
+
+# Versioned copies and legacy delivery bundles
+/assessment-plugin-v*/
+/交付-v*/
+/测评助手-v*.zip
+
+# Generated caches and local environments
+__pycache__/
+*.py[cod]
+*.log
+.venv/
+venv/
+node_modules/
+
+# Operating system files
+Thumbs.db
+Desktop.ini

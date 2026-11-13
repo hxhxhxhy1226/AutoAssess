@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>离线性格助手</title><link rel="stylesheet" href="popup.css"></head>
+<body><main>
+  <header><span class="logo" aria-hidden="true">P</span><div><strong>离线性格助手</strong><small>桌面连接</small></div><span class="version" id="version"></span></header>
+  <section class="connection-card" aria-labelledby="desktopHeading">
+    <div class="row"><h1 id="desktopHeading">桌面窗口</h1><span id="desktopStatus" class="badge" role="status">正在检查…</span></div>
+    <div id="desktopPairing">
+      <label for="desktopCode">桌面程序连接码</label>
+      <input id="desktopCode" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="粘贴桌面窗口中的连接码" aria-describedby="desktopHint">
+      <button id="desktopConnect" class="primary" disabled>连接当前页面</button>
+      <p id="desktopHint" class="muted">先打开桌面助手，在“连接”中复制连接码，再粘贴到这里。</p>
+    </div>
+    <p id="desktopTarget" class="target" hidden></p>
+    <p id="desktopCapture" class="capture" role="status" hidden></p>
+    <button id="desktopDisconnect" class="secondary" hidden>断开桌面连接</button>
+    <p id="desktopError" class="error" role="alert" hidden></p>
+  </section>
+  <p class="configuration-note">运行配置请在桌面窗口的“偏好设置”与“页面适配”中调整。</p>
+  <div class="links"><button id="practice" class="link">打开内置练习</button><button id="desktopRefresh" class="link" disabled>刷新状态</button></div>
+  <footer>题目与控制指令仅在本机传递</footer>
+</main><script src="popup.js"></script></body>
+</html>

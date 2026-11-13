@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>问卷星简短性格题回归样例</title>
+<style>
+body{font:18px/1.7 system-ui;background:#c3d6fd;padding:70px 18px;color:#222}
+#divQuestion{max-width:880px;margin:auto;background:white;padding:55px 50px}
+.htitle{text-align:center;color:#2e68ff;font-size:28px;font-weight:700;margin:0 0 48px}
+.field-label{display:flex;gap:6px;margin:20px 0}.req{color:red}
+.ui-radio{display:flex;padding:9px 24px;gap:8px;cursor:pointer}.jqradio{display:inline-block;width:18px;height:18px;border:1px solid #aaa;border-radius:50%}
+.jqchecked{border-color:#4c6fff;background:#4c6fff}#divNext{text-align:center;margin-top:70px}#divNext a{display:inline-block;background:#2c66ff;color:white;text-decoration:none;padding:12px 58px;border-radius:3px}
+</style>
+<body data-personality-fixture><main id="divQuestion"><div class="htitle">北森性格测试</div>
+<fieldset class="fieldset" pg="1" id="fieldset1" style="border:0"><div class="field ui-field-contain" topic="1" id="div1" type="3">
+<div class="field-label"><span class="req">*</span><div class="topicnumber">1.</div><div class="topichtml">最符合选项是</div></div><div class="ui-controlgroup column1">
+<div class="ui-radio"><span class="jqradiowrapper"><input type="radio" value="1" id="q1_1" name="q1" style="display:none"><a class="jqradio"></a></span><div class="label" for="q1_1">A.行事干脆果断</div></div>
+<div class="ui-radio"><span class="jqradiowrapper"><input type="radio" value="2" id="q1_2" name="q1" style="display:none"><a class="jqradio"></a></span><div class="label" for="q1_2">B.乐于与人交往</div></div>
+<div class="ui-radio"><span class="jqradiowrapper"><input type="radio" value="3" id="q1_3" name="q1" style="display:none"><a class="jqradio"></a></span><div class="label" for="q1_3">C.行事颇有远见</div></div>
+</div></div></fieldset>
+<fieldset class="fieldset" pg="2" id="fieldset2" style="border:0;display:none"><div class="field ui-field-contain" topic="2" id="div2" type="3">
+<div class="field-label"><span class="req">*</span><div class="topicnumber">2.</div><div class="topichtml">最不符合选项是</div></div><div class="ui-controlgroup column1">
+<div class="ui-radio"><span class="jqradiowrapper"><input type="radio" value="1" id="q2_1" name="q2" style="display:none"><a class="jqradio"></a></span><div class="label" for="q2_1">A.行事干脆果断</div></div>
+<div class="ui-radio"><span class="jqradiowrapper"><input type="radio" value="2" id="q2_2" name="q2" style="display:none"><a class="jqradio"></a></span><div class="label" for="q2_2">B.乐于与人交往</div></div>
+<div class="ui-radio"><span class="jqradiowrapper"><input type="radio" value="3" id="q2_3" name="q2" style="display:none"><a class="jqradio"></a></span><div class="label" for="q2_3">C.行事颇有远见</div></div>
+</div></div></fieldset>
+<div id="divNext"><a href="javascript:;" class="button">下一页</a></div><p id="fixtureMessage"></p></main>
+<script>
+'use strict';
+window.fixtureState={clicks:[],nextCalls:0,navigation:[],completed:false};
+document.querySelectorAll('.ui-radio').forEach(el=>el.addEventListener('click',()=>{
+  const group=el.closest('.field');
+  group.querySelectorAll('input').forEach(input=>input.checked=false);
+  group.querySelectorAll('.jqradio').forEach(mark=>mark.classList.remove('jqchecked'));
+  const input=el.querySelector('input');input.checked=true;el.querySelector('.jqradio').classList.add('jqchecked');
+  fixtureState.clicks.push({topic:group.getAttribute('topic'),value:input.value,text:el.querySelector('.label').textContent});
+}));
+document.querySelector('#divNext a').addEventListener('click',()=>{
+  fixtureState.nextCalls++;
+  const current=[...document.querySelectorAll('fieldset')].find(group=>group.style.display!=='none');
+  const answer=current.querySelector('input:checked');
+  fixtureState.navigation.push({topic:current.getAttribute('pg'),value:answer?.value||''});
+  if(!answer)return;
+  current.style.display='none';
+  if(current.id==='fieldset1')document.getElementById('fieldset2').style.display='';
+  else{
+    fixtureState.completed=true;document.getElementById('divNext').style.display='none';
+    const message=document.getElementById('fixtureMessage');message.dataset.personalityComplete='true';message.textContent='本场性格练习已完成';
+  }
+});
+</script></body></html>

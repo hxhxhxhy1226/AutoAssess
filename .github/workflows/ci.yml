@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: ${{ matrix.os }} / ${{ matrix.scope }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            scope: full non-GUI
+            args: ""
+          - os: ubuntu-latest
+            scope: core non-GUI
+            args: --skip-desktop-tests
+    env:
+      PYTHONUTF8: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+    defaults:
+      run:
+        working-directory: AutoAssess
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      # Windows Python includes Tcl/Tk. Ubuntu runs the portable core and real
+      # loopback checks; native desktop tests and actual GUI checks are distinct.
+      - name: Run verification
+        run: python tools/verify.py ${{ matrix.args }}
+      - name: Check release archive
+        run: python tools/build_release.py
+      - name: Upload checked Windows runtime bundle
+        if: matrix.os == 'windows-latest'
+        uses: actions/upload-artifact@v4
+        with:
+          name: autoassess-runtime
+          path: AutoAssess/dist/autoassess-v*.zip
+          if-no-files-found: error

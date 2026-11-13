@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>原创北森选择器结构样例</title>
+<style>
+body{font:17px/1.8 system-ui;background:#f5f7fc;color:#26334b;margin:40px}
+main{max-width:900px;background:#fff;border-radius:16px;margin:auto;padding:35px}
+[data-cls=tuozhuai-content]{display:flex;gap:24px;margin:25px 0}.fixture_I6Yvw_01{display:inline-block;padding:18px;border:1px solid #ccd6e8;cursor:pointer;border-radius:8px}
+.selected-focus{outline:2px solid #6750dc}.slots{display:flex;gap:24px;margin:24px 0}.fixture_qupWj_01{padding:20px;border:1px dashed #8594b1;border-radius:8px;min-width:170px;cursor:pointer}.assignment{display:block;color:#6744d7}
+.phoenix-button.content{display:inline-block;background:#6750dc;color:white;border-radius:6px;padding:9px 45px;cursor:pointer}
+</style><body data-personality-fixture><main id="fixture"></main><script>
+'use strict';
+const nested=new URLSearchParams(location.search).has('nested');
+const groups=[['善于沟通的','有计划性的','焦虑的'],['焦虑的','善于沟通的','有计划性的']];
+window.fixtureState={index:0,focus:'',most:'',least:'',clicks:[],confirmCalls:0,history:[],submitCalls:0,completed:false};
+function render(){
+  fixtureState.focus=fixtureState.most=fixtureState.least='';
+  const area=document.getElementById('fixture');
+  area.innerHTML='<section class="source-question"><div class="question-title">第 '+(fixtureState.index+1)+' 组：请选择最符合和最不符合自己的描述</div>'
+    +'<div data-cls="tuozhuai-content">'+groups[fixtureState.index].map(word=>'<span class="fixture_I6Yvw_01">'+word+'</span>').join('')+'</div>'
+    +'<div class="slots">'+[['most','最符合'],['least','最不符合']].map(([name,label])=>'<div id="'+name+'Box" class="fixture_qupWj_01">'+(nested?'<span class="role-label">'+label+'</span>':label)+'<span class="assignment"></span></div>').join('')+'</div>'
+    +'<div id="fixtureConfirm" class="phoenix-button content">确定</div></section>';
+  for(const option of area.querySelectorAll('[data-cls] span'))option.addEventListener('click',()=>{
+    fixtureState.focus=option.textContent;fixtureState.clicks.push({kind:'focus',word:option.textContent});
+    area.querySelectorAll('[data-cls] span').forEach(span=>span.classList.toggle('selected-focus',span===option));
+  });
+  for(const name of ['most','least'])document.getElementById(name+'Box').addEventListener('click',()=>{
+    if(!fixtureState.focus)return;
+    fixtureState[name]=fixtureState.focus;const opposite=name==='most'?'least':'most';
+    if(fixtureState[opposite]===fixtureState.focus)fixtureState[opposite]='';
+    for(const role of ['most','least'])document.querySelector('#'+role+'Box .assignment').textContent=fixtureState[role];
+    fixtureState.clicks.push({kind:name,word:fixtureState[name]});
+  });
+  document.getElementById('fixtureConfirm').addEventListener('click',()=>{
+    if(document.getElementById('fixtureConfirm').textContent==='提交'){fixtureState.submitCalls++;return;}
+    fixtureState.confirmCalls++;
+    if(!fixtureState.most||!fixtureState.least||fixtureState.most===fixtureState.least)return;
+    fixtureState.history.push({most:fixtureState.most,least:fixtureState.least});
+    if(fixtureState.index===0){fixtureState.index++;render();}
+    else{fixtureState.completed=true;area.innerHTML='<p data-personality-complete="true">本场性格练习已完成</p><div id="fixtureSubmit" class="phoenix-button content">提交</div>';document.getElementById('fixtureSubmit').onclick=()=>fixtureState.submitCalls++;}
+  });
+}
+render();
+</script></body></html>

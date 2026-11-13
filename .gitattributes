@@ -1,0 +1,8 @@
+# Consistent text files across Windows and Linux checkouts
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.png -text
+*.ico -text
+
+# Pinned upstream snapshots must retain their exact source hashes
+/AutoAssess/assessment-plugin/vendor/bigfive-source/** -text

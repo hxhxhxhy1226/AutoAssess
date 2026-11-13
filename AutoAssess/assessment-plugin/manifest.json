@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "离线性格测评助手",
+  "version": "0.5.1",
+  "description": "离线性格量表、二选一、三选二与 DISC 四选二；支持同页多题、已答保留和自动填写。",
+  "icons": {"16":"icons/icon-16.png","32":"icons/icon-32.png","48":"icons/icon-48.png","128":"icons/icon-128.png"},
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_title": "测评助手", "default_popup": "popup.html", "default_icon": {"16":"icons/icon-16.png","32":"icons/icon-32.png"}},
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["loader.js"],
+    "run_at": "document_idle"
+  }],
+  "commands": {
+    "stop-run": {"suggested_key": {"default": "Alt+Shift+S"}, "description": "停止识别与填写"}
+  }
+}

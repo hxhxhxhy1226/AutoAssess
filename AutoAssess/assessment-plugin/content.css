@@ -1,0 +1,14 @@
+#assessment-qa-panel {
+  position: fixed; z-index: 2147483647; top: 16px; right: 16px; width: 310px;
+  padding: 14px; border: 2px solid #155eef; border-radius: 10px; background: #fff;
+  color: #172b4d; box-shadow: 0 8px 28px rgba(0,0,0,.24);
+  font: 14px/1.45 system-ui, "Microsoft YaHei", sans-serif;
+}
+#assessment-qa-panel * { box-sizing: border-box; }
+#assessment-qa-panel .qa-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+#assessment-qa-panel .qa-watermark { color: #b42318; font-weight: 700; }
+#assessment-qa-panel .qa-status { margin: 8px 0; padding: 7px; background: #f2f4f7; border-radius: 6px; white-space: pre-wrap; }
+#assessment-qa-panel button { margin: 3px 4px 3px 0; padding: 6px 10px; border: 1px solid #98a2b3; border-radius: 6px; background: #fff; cursor: pointer; }
+#assessment-qa-panel button[data-action=start] { background: #155eef; color: #fff; border-color: #155eef; }
+#assessment-qa-panel button:disabled { opacity: .5; cursor: not-allowed; }
+#assessment-qa-panel .qa-small { font-size: 12px; color: #667085; }

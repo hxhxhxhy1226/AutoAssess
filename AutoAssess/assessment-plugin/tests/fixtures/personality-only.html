@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>离线性格交互测试</title>
+<style>
+body{font:16px/1.7 system-ui;margin:28px;max-width:880px;background:#f8f9fc;color:#233}
+.question-container,table{background:white;border:1px solid #ccd;padding:20px;border-radius:10px}
+.question-title{font-size:20px;font-weight:600;margin-bottom:18px}
+label.option,.adjective-item{display:block;padding:12px;margin:6px 0;border:1px solid #ccd;border-radius:6px;cursor:pointer}
+input{margin-right:12px}table{border-collapse:collapse;width:100%}td,th{padding:12px;border:1px solid #ddd}
+thead{background:#f0f1f9}.pair-actions,nav{display:flex;gap:15px;margin:18px 0}button{padding:9px 22px;font:inherit}
+.adjective-item.focus{outline:2px solid #7657ce}[data-assigned]{background:#eee8ff}[data-role=assignment]{float:right;color:#6541a4}
+</style>
+<body data-site="mock-assessment">
+<h1>原创离线性格交互样例</h1><p>请按自己的实际情况选择。该页面只记录本机操作，不联网请求答案。</p>
+<main id="fixture"></main>
+<script>
+"use strict";
+const scenario = new URLSearchParams(location.search).get("scenario") || "scale";
+const root = document.getElementById("fixture");
+window.fixtureState = {clicks:[],nextCalls:0,navigation:[],completed:false,most:"",least:"",focus:""};
+const escapeText = text => String(text).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
+const usual = ["非常不符合","比较不符合","一般","比较符合","非常符合"];
+const frequency = ["从不","很少","有时","经常","总是"];
+function finish() {
+  fixtureState.completed = true;
+  root.innerHTML = '<section data-personality-complete="true"><h2>本场性格练习已完成</h2><p>全部题目已有本机选择记录。</p></section>';
+}
+function addNext(ready) {
+  const nav = document.createElement("nav"), button = document.createElement("button");
+  button.id = "fixtureNext"; button.textContent = scenario === "matrix" ? "下一页" : "下一题";
+  button.addEventListener("click", () => {
+    fixtureState.nextCalls++;
+    const status = ready();
+    fixtureState.navigation.push(status);
+    if (status.complete) finish();
+  }); nav.append(button); root.append(nav);
+}
+function scalar(stem, labels, type="likert", image=false) {
+  root.innerHTML = `<section class="question-container" data-qid="offline-${scenario}" data-type="${type}"><div class="question-title" data-role="stem">${escapeText(stem)}</div>${image ? '<img width="32" height="32" alt="测试图片" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAALUlEQVR4nGOUS9nCQEvARFPTRy0YtWDUglELRi0YtWDUglELRi0YtWDUAioCADzOAXbpHyUDAAAAAElFTkSuQmCC">' : ''}${labels.map((label,index)=>`<label class="option" data-role="option" data-key="${String.fromCharCode(65+index)}"><input type="radio" name="single" value="${String.fromCharCode(65+index)}">${escapeText(label)}</label>`).join("")}</section>`;
+  for (const input of root.querySelectorAll("input")) input.addEventListener("click", () => {
+    fixtureState.clicks.push({kind:"single",key:input.value,text:input.parentElement.textContent.trim()});
+  });
+  addNext(() => ({complete:Boolean(root.querySelector("input:checked")),selected:root.querySelector("input:checked")?.value || ""}));
+}
+function pair(shared=false, count=3) {
+  const labels = count===4 ? ["善于沟通的","有计划性的","乐观的","焦虑的"] : ["善于沟通的","有计划性的","焦虑的"];
+  const scope = document.createElement("section"); scope.className="question-container";scope.dataset.qid=`offline-${scenario}`;scope.dataset.type="forced_pair";
+  scope.innerHTML='<div class="question-title" data-role="stem">请按自己的实际情况，选出最像自己和最不像自己的一项。</div>';
+  if(shared){
+    scope.innerHTML += labels.map((label,index)=>`<div class="adjective-item" data-role="adjective" data-key="${String.fromCharCode(65+index)}"><span class="adjective-text">${label}</span><span data-role="assignment"></span></div>`).join("")
+      + '<div class="pair-actions"><button data-choice="most">最像自己</button><button data-choice="least">最不像自己</button></div>';
+    for(const item of scope.querySelectorAll('.adjective-item')) item.addEventListener('click',()=>{
+      fixtureState.focus=item.dataset.key;fixtureState.clicks.push({kind:'focus',key:item.dataset.key});
+      for(const row of scope.querySelectorAll('.adjective-item'))row.classList.toggle('focus',row===item);
+    });
+    for(const button of scope.querySelectorAll('.pair-actions button'))button.addEventListener('click',()=>{
+      if(!fixtureState.focus)return;
+      assign(button.dataset.choice,fixtureState.focus);
+    });
+  } else {
+    scope.innerHTML += '<table><thead><tr><th>描述</th><th>Most</th><th>Least</th></tr></thead><tbody>'
+      + labels.map((label,index)=>`<tr data-forced-row data-key="${String.fromCharCode(65+index)}"><td data-role="trait">${label}</td><td><input type="radio" name="most" data-choice="most" value="${String.fromCharCode(65+index)}"></td><td><input type="radio" name="least" data-choice="least" value="${String.fromCharCode(65+index)}"></td></tr>`).join('')+'</tbody></table>';
+    for(const input of scope.querySelectorAll('input'))input.addEventListener('click',()=>assign(input.dataset.choice,input.value));
+  }
+  function assign(role,key){
+    fixtureState[role]=key;fixtureState.clicks.push({kind:role,key});
+    const opposite=role==='most'?'least':'most';if(fixtureState[opposite]===key)fixtureState[opposite]='';
+    for(const row of scope.querySelectorAll('[data-key]')){
+      const assigned=fixtureState.most===row.dataset.key?'most':fixtureState.least===row.dataset.key?'least':'';
+      if(assigned)row.dataset.assigned=assigned;else delete row.dataset.assigned;
+      const tag=row.querySelector('[data-role=assignment]');if(tag)tag.textContent=assigned==='most'?'最像自己':assigned==='least'?'最不像自己':'';
+      for(const input of row.querySelectorAll('input'))input.checked=fixtureState[input.dataset.choice]===row.dataset.key;
+    }
+  }
+  root.append(scope);
+  addNext(()=>({complete:Boolean(fixtureState.most&&fixtureState.least&&fixtureState.most!==fixtureState.least),most:fixtureState.most,least:fixtureState.least}));
+}
+function matrix(){
+  const rows=['我会按时完成任务。','我容易紧张。'];
+  root.innerHTML='<table class="likert-matrix" data-personality-matrix data-qid="offline-matrix"><caption>请按自己的实际情况，分别评价以下描述。</caption><thead><tr><th>描述</th>'
+    + frequency.map(text=>'<th>'+text+'</th>').join('')+'</tr></thead><tbody>'
+    + rows.map((stem,index)=>`<tr data-row-key="row-${index+1}"><td>${stem}</td>${frequency.map((_,level)=>`<td><label><input type="radio" name="matrix-${index+1}" value="${String.fromCharCode(65+level)}" aria-label="${frequency[level]}"></label></td>`).join('')}</tr>`).join('')+'</tbody></table>';
+  for(const input of root.querySelectorAll('input'))input.addEventListener('click',()=>fixtureState.clicks.push({kind:'matrix',row:input.name,key:input.value,label:input.getAttribute('aria-label')}));
+  addNext(()=>{const filled=root.querySelectorAll('tbody tr input:checked').length;return {complete:filled===rows.length,filled,total:rows.length};});
+}
+if(scenario==='pair-matrix')pair();
+else if(scenario==='pair-shared')pair(true);
+else if(scenario==='pair-four')pair(false,4);
+else if(scenario==='matrix')matrix();
+else if(scenario==='frequency')scalar('我会按时完成任务。',['经常','从不','总是','有时','很少']);
+else if(scenario==='reverse')scalar('容易紧张',[...usual].reverse());
+else if(scenario==='description')scalar('下面哪条更符合你？',['善于沟通的','焦虑的','有计划性的'],'forced_choice');
+else if(scenario==='knowledge')scalar('以下哪项最符合作者对水的描述？',['水由氢与氧组成','水只含有碳元素'],'single_choice');
+else if(scenario==='image')scalar('下面哪张图形更符合你？',['第一种图形','第二种图形'],'forced_choice',true);
+else if(scenario==='stale')scalar('我喜欢用早晨做计划。',['不符合','一般','符合']);
+else scalar('做事有计划有条理',usual);
+</script></body></html>

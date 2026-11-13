@@ -1,0 +1,2949 @@
+{
+  "site": "personality-practice",
+  "source": {
+    "name": "原有性格练习题",
+    "reference": "筛选保留原194题中的100道性格题，原记录备份在.review/before-040。"
+  },
+  "questions": [
+    {
+      "qid": "beisen-likert-001",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "团队讨论时，我习惯主动提出方案。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-002",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "遇到分歧，我愿意主动调解双方矛盾。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-003",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "突发紧急任务，我容易焦虑慌乱。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-004",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "我更喜欢按固定计划做事，不喜欢临时变动。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-005",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "别人指出我的错误，我会先反思自身问题。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-006",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "工作没做完，我会优先牺牲休息完成。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-007",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "遇到难题，我习惯独自钻研，很少求助同事。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-008",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "新任务我愿意先尝试，边做边调整。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-009",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "当众发言会让我十分紧张。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-010",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "我会主动同步工作进度给领导。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-011",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "我倾向于在团队中承担统筹协调的角色。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-012",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "面对压力时，我能保持冷静并找到解决办法。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-013",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "我容易对重复性的日常工作感到厌倦。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-likert-014",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·性格自评（李克特 5 点）",
+      "stem": "我更看重工作的稳定性而非短期高薪。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-rev-001",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·一致性/测谎题（反向表述）",
+      "stem": "我偶尔会在简历或自我介绍中夸大自己的成就。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "beisen-rev-002",
+      "type": "likert",
+      "platform": "beisen",
+      "provenance": "self-authored",
+      "title": "北森·一致性/测谎题（反向表述）",
+      "stem": "即使没人发现，我也可能对工作上的小失误避而不谈。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "job51-fc-001",
+      "type": "forced_choice",
+      "platform": "51job",
+      "provenance": "self-authored",
+      "title": "51job·迫选（二选一，更贴近你的）",
+      "stem": "请选择更贴近你的一项：",
+      "options": [
+        {
+          "key": "A",
+          "text": "我常常对公认的观点有质疑。"
+        },
+        {
+          "key": "B",
+          "text": "新知识能强烈吸引我。"
+        }
+      ]
+    },
+    {
+      "qid": "job51-fc-002",
+      "type": "forced_choice",
+      "platform": "51job",
+      "provenance": "self-authored",
+      "title": "51job·迫选（二选一，更贴近你的）",
+      "stem": "请选择更贴近你的一项：",
+      "options": [
+        {
+          "key": "A",
+          "text": "我很少比别人更强。"
+        },
+        {
+          "key": "B",
+          "text": "我更在意把事情做完。"
+        }
+      ]
+    },
+    {
+      "qid": "job51-fc-003",
+      "type": "forced_choice",
+      "platform": "51job",
+      "provenance": "self-authored",
+      "title": "51job·迫选（二选一，更贴近你的）",
+      "stem": "请选择更贴近你的一项：",
+      "options": [
+        {
+          "key": "A",
+          "text": "我喜欢按流程办事。"
+        },
+        {
+          "key": "B",
+          "text": "我喜欢打破常规。"
+        }
+      ]
+    },
+    {
+      "qid": "job51-fc-004",
+      "type": "forced_choice",
+      "platform": "51job",
+      "provenance": "self-authored",
+      "title": "51job·迫选（二选一，更贴近你的）",
+      "stem": "请选择更贴近你的一项：",
+      "options": [
+        {
+          "key": "A",
+          "text": "我容易被他人的情绪影响。"
+        },
+        {
+          "key": "B",
+          "text": "我能很快从挫折中恢复。"
+        }
+      ]
+    },
+    {
+      "qid": "zhilian-env-001",
+      "type": "likert",
+      "platform": "zhilian",
+      "provenance": "self-authored",
+      "title": "智联·工作环境偏好（李克特）",
+      "stem": "以下描述中，你对『充满竞争，能不断挑战自我。』的认同程度是？",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "zhilian-env-002",
+      "type": "likert",
+      "platform": "zhilian",
+      "provenance": "self-authored",
+      "title": "智联·工作环境偏好（李克特）",
+      "stem": "以下描述中，你对『和谐稳定，人际关系压力小。』的认同程度是？",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "zhilian-env-003",
+      "type": "likert",
+      "platform": "zhilian",
+      "provenance": "self-authored",
+      "title": "智联·工作环境偏好（李克特）",
+      "stem": "以下描述中，你对『多样化，能接触不同的人和事。』的认同程度是？",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "zhilian-env-004",
+      "type": "likert",
+      "platform": "zhilian",
+      "provenance": "self-authored",
+      "title": "智联·工作环境偏好（李克特）",
+      "stem": "以下描述中，你对『流程明确，相对固定。』的认同程度是？",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "gh-like-001",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:tything/questionnaire",
+      "title": "开源性格量表（likert，引用）",
+      "stem": "在社交场合，我更喜欢与一小群亲密朋友交流，而不是参加大型聚会。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "gh-like-002",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:tything/questionnaire",
+      "title": "开源性格量表（likert，引用）",
+      "stem": "相比于独立工作，我更喜欢与人协作。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "gh-like-003",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:tything/questionnaire",
+      "title": "开源性格量表（likert，引用）",
+      "stem": "我对新事物和创新持有开放的态度。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "gh-like-004",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:tything/questionnaire",
+      "title": "开源性格量表（likert，引用）",
+      "stem": "我认为有规划和有序的工作环境对我更有帮助。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "gh-like-005",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:tything/questionnaire",
+      "title": "开源性格量表（likert，引用）",
+      "stem": "我喜欢通过解决问题来挑战自己的智力。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "gh-like-006",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:tything/questionnaire",
+      "title": "开源性格量表（likert，引用）",
+      "stem": "我在帮助他人解决问题时感到满足。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "gh-like-007",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:tything/questionnaire",
+      "title": "开源性格量表（likert，引用）",
+      "stem": "我对科学和技术领域有着浓厚的兴趣。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "gh-like-008",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:tything/questionnaire",
+      "title": "开源性格量表（likert，引用）",
+      "stem": "我喜欢按照自己的方式和步调工作，而不受太多限制。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "gh-like-009",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:tything/questionnaire",
+      "title": "开源性格量表（likert，引用）",
+      "stem": "我更喜欢稳定且可预期的工作环境。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "gh-like-010",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:tything/questionnaire",
+      "title": "开源性格量表（likert，引用）",
+      "stem": "我享受与人交流和分享新的想法与观点。",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ]
+    },
+    {
+      "qid": "gh-fc-001",
+      "type": "forced_choice",
+      "platform": "generic",
+      "provenance": "ref:github:gist/FrenzyExists/personality_test",
+      "title": "开源人格示例（迫选，引用）",
+      "stem": "请选择更贴近你的一项：",
+      "options": [
+        {
+          "key": "A",
+          "text": "我偏好独立工作而非团队工作。"
+        },
+        {
+          "key": "B",
+          "text": "我偏好团队协作而非独立工作。"
+        }
+      ]
+    },
+    {
+      "qid": "gh-fc-002",
+      "type": "forced_choice",
+      "platform": "generic",
+      "provenance": "ref:github:gist/FrenzyExists/personality_test",
+      "title": "开源人格示例（迫选，引用）",
+      "stem": "请选择更贴近你的一项：",
+      "options": [
+        {
+          "key": "A",
+          "text": "我愿意为职业目标承担风险。"
+        },
+        {
+          "key": "B",
+          "text": "我对风险较为谨慎。"
+        }
+      ]
+    },
+    {
+      "qid": "gh-fc-003",
+      "type": "forced_choice",
+      "platform": "generic",
+      "provenance": "ref:github:gist/FrenzyExists/personality_test",
+      "title": "开源人格示例（迫选，引用）",
+      "stem": "请选择更贴近你的一项：",
+      "options": [
+        {
+          "key": "A",
+          "text": "我喜欢挑战舒适区之外的新任务。"
+        },
+        {
+          "key": "B",
+          "text": "我更偏好熟悉稳妥的事。"
+        }
+      ]
+    },
+    {
+      "qid": "gh-fc-004",
+      "type": "forced_choice",
+      "platform": "generic",
+      "provenance": "ref:github:gist/FrenzyExists/personality_test",
+      "title": "开源人格示例（迫选，引用）",
+      "stem": "请选择更贴近你的一项：",
+      "options": [
+        {
+          "key": "A",
+          "text": "我习惯持续精进自己的技能与知识。"
+        },
+        {
+          "key": "B",
+          "text": "我满足于现状。"
+        }
+      ]
+    },
+    {
+      "qid": "gh-fc-005",
+      "type": "forced_choice",
+      "platform": "generic",
+      "provenance": "ref:github:gist/FrenzyExists/personality_test",
+      "title": "开源人格示例（迫选，引用）",
+      "stem": "请选择更贴近你的一项：",
+      "options": [
+        {
+          "key": "A",
+          "text": "在团队中我愿意主动牵头与决策。"
+        },
+        {
+          "key": "B",
+          "text": "在团队中我更愿意配合执行。"
+        }
+      ]
+    },
+    {
+      "qid": "gh-fc-006",
+      "type": "forced_choice",
+      "platform": "generic",
+      "provenance": "ref:github:gist/FrenzyExists/personality_test",
+      "title": "开源人格示例（迫选，引用）",
+      "stem": "请选择更贴近你的一项：",
+      "options": [
+        {
+          "key": "A",
+          "text": "我看重工作与生活的平衡。"
+        },
+        {
+          "key": "B",
+          "text": "我愿意为工作投入大量个人时间。"
+        }
+      ]
+    },
+    {
+      "qid": "bfi2-001",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "性格外向，喜欢交际",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-002",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "心肠柔软，有同情心",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-003",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "缺乏条理",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-004",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "从容，善于处理压力",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-005",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "对艺术没有什么兴趣",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-006",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "性格坚定自信，敢于表达自己的观点",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-007",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "为人恭谦，尊重他人",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-008",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "比较懒",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-009",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "经历挫折后仍能保持积极心态",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-010",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "对许多不同的事物都感兴趣",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-011",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "很少觉得兴奋或者特别想要(做)什么",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-012",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "常常挑别人的毛病",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-013",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "可信赖的，可靠的",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-014",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "喜怒无常，情绪起伏较多",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-015",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "善于创造，能找到聪明的方法来做事",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-016",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "比较安静",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-017",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "对他人没有什么同情心",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-018",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "做事有计划有条理",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-019",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "容易紧张",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-020",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "着迷于艺术、音乐或文学",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-021",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "常常处于主导地位，像个领导一样",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-022",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "常与他人意见不和",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-023",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "很难开始行动起来去完成一项任务",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-024",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "觉得有安全感，对自己满意",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-025",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "不喜欢知识性或者哲学性强的讨论",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-026",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "不如别人有活力",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-027",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "宽宏大量",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-028",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "有时比较没有责任心",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-029",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "情绪稳定，不易生气",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-030",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "几乎没有什么创造性",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-031",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "有时会害羞，比较内向",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-032",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "乐于助人，待人无私",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-033",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "习惯让事物保持整洁有序",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-034",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "时常忧心忡忡，担心很多事情",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-035",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "重视艺术与审美",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-036",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "感觉自己很难对他人产生影响",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-037",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "有时对人比较粗鲁",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-038",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "有效率，做事有始有终",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-039",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "时常觉得悲伤",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-040",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "思想深刻",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-041",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "精力充沛",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-042",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "不相信别人，怀疑别人的意图",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-043",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "可靠的，总是值得他人信赖",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-044",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "能够控制自己的情绪",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-045",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "缺乏想象力",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-046",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "爱说话，健谈",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-047",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "有时对人冷淡，漠不关心",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-048",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "乱糟糟的，不爱收拾",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-049",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "很少觉得焦虑或者害怕",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-050",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "觉得诗歌、戏剧很无聊",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-051",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "更喜欢让别人来领头负责",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-052",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "待人谦逊礼让",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-053",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "有恒心，能坚持把事情做完",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-054",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "时常觉得郁郁寡欢",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-055",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "对抽象的概念和想法没什么兴趣",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-056",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·外向性（开源引用）",
+      "stem": "充满热情",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-057",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·宜人性（开源引用）",
+      "stem": "把人往最好的方面想",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-058",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·尽责性（开源引用）",
+      "stem": "有时候会做出一些不负责任的行为",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": true
+    },
+    {
+      "qid": "bfi2-059",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·情绪稳定性（开源引用）",
+      "stem": "情绪多变，容易愤怒",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    },
+    {
+      "qid": "bfi2-060",
+      "type": "likert",
+      "platform": "generic",
+      "provenance": "ref:github:Selina233/personality-test (BFI-2 公开量表)",
+      "title": "BFI-2 大五人格·开放性（开源引用）",
+      "stem": "有创意，能想出新点子",
+      "options": [
+        {
+          "key": "A",
+          "text": "非常不符合"
+        },
+        {
+          "key": "B",
+          "text": "不符合"
+        },
+        {
+          "key": "C",
+          "text": "一般符合"
+        },
+        {
+          "key": "D",
+          "text": "符合"
+        },
+        {
+          "key": "E",
+          "text": "非常符合"
+        }
+      ],
+      "reverse": false
+    }
+  ]
+}

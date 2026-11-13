@@ -1,0 +1,6 @@
+{
+  "test_url": "https://example.invalid/never-open",
+  "adjective_ranking": ["善于沟通的", "有计划性的", "焦虑的"],
+  "answer_categories": {"符合": ["这是导入的自编题目"]},
+  "default_answer": "非常不符合"
+}

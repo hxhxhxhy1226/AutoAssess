@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Original M/L form fixture</title>
+<style>body{font:16px/1.6 system-ui;margin:28px;background:#f5f7fb;color:#253044}h1{font-size:24px}.quiz-table{background:#fff;border-collapse:collapse;width:100%;max-width:880px}.quiz-table td{padding:10px;border:1px solid #d8deea}.quiz-table .quiz-table{margin-bottom:18px}input{width:20px;height:20px}button{font:inherit;padding:10px 25px;margin-top:18px}</style>
+<body data-site="mock-assessment">
+<div class="html-lightbox-intro"><h1 class="htitle" id="htitle">Personality Questionnaire</h1></div>
+<p id="instructions">Original interaction examples. Each group has M and L columns.</p>
+<main id="fixture"></main>
+<script>
+'use strict';
+const fixtureRoot=document.getElementById('fixture');
+window.fixtureState={clicks:[],nextCalls:0,completed:false,answers:[]};
+const descriptions=[['我主动与人沟通','我注重细节','我容易焦虑'],['我在压力下保持冷静','我喜欢独立工作','我愿意倾听他人']];
+fixtureRoot.innerHTML='<table class="quiz-table"><tbody>'+descriptions.map((group,index)=>'<tr><td><form id="form-'+(index+1)+'"><table class="quiz-table unset-layout"><tbody>'
+  +'<tr><td colspan="3">&nbsp;</td><td><strong>M</strong></td><td><strong>L</strong></td></tr>'
+  +group.map((description,row)=>'<tr><td>'+(row===0?index+1:'&nbsp;')+'</td><td><strong>'+String.fromCharCode(65+row)+'</strong></td><td class="description">'+description+'</td>'
+    +'<td><input type="radio" name="RadioGroupm" value="'+String.fromCharCode(97+row)+'"></td>'
+    +'<td><input type="radio" name="RadioGroupl" value="'+String.fromCharCode(97+row)+'"></td></tr>').join('')
+  +'</tbody></table></form></td></tr>').join('')+'</tbody></table><button id="fixtureNext">下一页</button>';
+for(const input of fixtureRoot.querySelectorAll('input'))input.addEventListener('click',()=>{
+  const opposite=input.name==='RadioGroupm'?'RadioGroupl':'RadioGroupm';
+  const conflict=[...input.form.elements].find(other=>other.name===opposite&&other.value===input.value&&other.checked);
+  if(conflict)conflict.checked=false;
+  fixtureState.clicks.push({form:input.form.id,name:input.name,value:input.value});
+});
+document.getElementById('fixtureNext').addEventListener('click',()=>{
+  fixtureState.nextCalls++;
+  fixtureState.answers=[...fixtureRoot.querySelectorAll('form')].map(form=>({
+    form:form.id,most:form.querySelector('input[name="RadioGroupm"]:checked')?.value||'',
+    least:form.querySelector('input[name="RadioGroupl"]:checked')?.value||''
+  }));
+  if(fixtureState.answers.length===2&&fixtureState.answers.every(row=>row.most&&row.least&&row.most!==row.least)){
+    fixtureState.completed=true;
+    fixtureRoot.innerHTML='<section data-personality-complete="true">Personality practice completed</section>';
+  }
+});
+</script></body></html>

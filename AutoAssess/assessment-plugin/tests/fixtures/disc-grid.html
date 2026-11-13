@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>原创 DISC 横向题组测试</title>
+<style>body{font:16px/1.6 system-ui;margin:26px;background:#f6f7fb;color:#24304a}table{border-collapse:collapse;background:#fff}th,td{border:1px solid #ccd3df;padding:10px}caption{font-size:20px;margin:12px}button{font:inherit;padding:10px 30px;margin:20px 0}input{width:20px;height:20px}</style>
+<body data-site="mock-assessment"><main id="fixture"></main>
+<script>
+'use strict';
+const root = document.getElementById('fixture');
+window.fixtureState = { clicks: [], nextCalls: 0, completed: false };
+const phrases = [
+  ['我善于沟通', '我喜欢探索新想法', '我总会制定计划', '我容易焦虑'],
+  ['我保持冷静', '我乐于与人合作', '我注重细节', '我喜欢独处'],
+  ['我会坚持到底', '我愿意倾听', '我主动社交', '我常常粗心'],
+  ['我认真负责', '我享受创新', '我喜欢独立工作', '我容易紧张']
+];
+root.innerHTML = '<form><table data-disc-grid><caption>性格自评：请按自己的实际情况，每组选择 Most 与 Least</caption><thead><tr>'
+  + phrases.map(() => '<th>组号</th><th>描述</th><th>Most</th><th>Least</th>').join('') + '</tr></thead><tbody>'
+  + [0, 1, 2, 3].map(row => '<tr>' + phrases.map((group, index) => (row === 0 ? '<th rowspan="4">' + (index + 1) + '</th>' : '')
+    + '<td class="description">' + group[row] + '</td><td><input type="radio" name="m[' + index + ']" value="m-value-' + row + '"></td>'
+    + '<td><input type="radio" name="l[' + index + ']" value="l-value-' + row + '"></td>').join('') + '</tr>').join('')
+  + '</tbody><tfoot><tr><td colspan="16">以上文字为原创交互样例。</td></tr></tfoot></table></form><button id="fixtureNext">下一页</button>';
+for (const input of root.querySelectorAll('input')) input.addEventListener('click', () => {
+  fixtureState.clicks.push({ name: input.name, value: input.value });
+});
+document.getElementById('fixtureNext').addEventListener('click', () => {
+  fixtureState.nextCalls++;
+  const valid = phrases.every((_, index) => {
+    const most = document.querySelector('input[name="m[' + index + ']"]:checked');
+    const least = document.querySelector('input[name="l[' + index + ']"]:checked');
+    return most && least && most.value.slice(-1) !== least.value.slice(-1);
+  });
+  if (valid) { fixtureState.completed = true; root.innerHTML = '<section data-personality-complete="true">性格练习已完成</section>'; }
+});
+</script></body></html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>问卷星未知性格题策略回归样例</title>
+<style>
+body{font:16px/1.8 system-ui;margin:40px;max-width:850px;background:#f6f7fb;color:#222}
+h1{font-size:23px}.field{border:1px solid #ddd;background:white;padding:24px;border-radius:12px}
+fieldset{border:0;padding:0}.ui-radio{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #ddd;margin:8px 0;cursor:pointer}
+.jqradio{display:inline-block;border:1px solid #bbb;width:15px;height:15px;border-radius:50%}.jqchecked{background:#743bed;border-color:#743bed}
+#divNext a,button{display:inline-block;background:#743bed;color:white;padding:9px 25px;border:0;border-radius:8px;cursor:pointer;margin-top:20px}
+</style>
+<body>
+<h1>性格选择练习</h1><p>本页使用问卷星控件结构复现用户截图，并加入未收录量表与完全陌生的选项。</p>
+<div id="divQuestion"></div>
+<div id="divNext"><a href="javascript:;" class="button">下一页</a></div>
+<button id="submit" style="display:none">提交</button>
+<script>
+const fixtureScenario = new URLSearchParams(location.search).get('case');
+const descriptionChoices = ['面对困难不轻易放弃','能够理性地处理工作','深入探索研究新知识','主动与陌生人沟通'];
+const fixtureQuestions = fixtureScenario === 'traits-three' || fixtureScenario === 'traits-four' ? [
+  {stem:'最符合选项是', options:descriptionChoices.slice(0,fixtureScenario === 'traits-three' ? 3 : 4)}
+] : [
+  {stem:'最符合选项是', options:['能在压力下工作','能发现信息间的关联','能在期限前完成工作']},
+  {stem:'我在新环境里会采用只有我知道的方法处理事项。', options:['非常不同意','不同意','中立','同意','非常同意']},
+  {stem:'最符合选项是', options:['偏好赤曜方式','偏好青岚方式','偏好墨砚方式']}
+];
+window.fixtureState = {page:1, history:[]};
+document.getElementById('divQuestion').innerHTML=fixtureQuestions.map((question,index)=>{
+  const page=index+1;
+  return `<fieldset class="fieldset" pg="${page}" id="fieldset${page}" ${index?'style="display:none"':''}>
+    <div class="field ui-field-contain" topic="${page}" id="div${page}" type="3">
+      <div class="field-label"><div class="topicnumber">${page}.</div><div class="topichtml">${question.stem}</div></div>
+      <div class="ui-controlgroup column1">${question.options.map((text,option)=>`<div class="ui-radio">
+        <span class="jqradiowrapper"><input type="radio" value="${option+1}" id="q${page}_${option+1}" name="q${page}" style="display:none"><a class="jqradio"></a></span>
+        <div class="label" for="q${page}_${option+1}">${String.fromCharCode(65+option)}.${text}</div></div>`).join('')}
+      </div>
+    </div></fieldset>`;
+}).join('');
+if(fixtureQuestions.length===1){
+  document.getElementById('divNext').style.display='none';
+  document.getElementById('submit').style.display='';
+}
+document.querySelectorAll('.ui-radio').forEach(row=>row.addEventListener('click',()=>{
+  row.closest('.field').querySelectorAll('input').forEach(input=>input.checked=false);
+  row.closest('.field').querySelectorAll('.jqradio').forEach(control=>control.classList.remove('jqchecked'));
+  row.querySelector('input').checked=true;
+  row.querySelector('.jqradio').classList.add('jqchecked');
+}));
+document.querySelector('#divNext a').onclick=()=>{
+  const page=document.getElementById(`fieldset${fixtureState.page}`);
+  const selected=page.querySelector('input:checked');
+  if(!selected)return;
+  fixtureState.history.push({page:fixtureState.page,value:selected.value});
+  page.style.display='none';
+  fixtureState.page++;
+  document.getElementById(`fieldset${fixtureState.page}`).style.display='';
+  if(fixtureState.page===fixtureQuestions.length){
+    document.getElementById('divNext').style.display='none';
+    document.getElementById('submit').style.display='';
+  }
+};
+document.getElementById('submit').onclick=()=>document.body.dataset.submitted='true';
+</script>
+</body>
+</html>
